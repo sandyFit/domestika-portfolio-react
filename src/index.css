@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Syne:wght@400..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@keyframes rotateIcon {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+
+.rotating-icon {
+  animation: rotateIcon 3s linear infinite;
+}
+
+
+@layer base {
+    body {
+        @apply m-0 p-0 box-border overflow-x-hidden font-inter w-full h-full flex flex-col justify-center items-center
+            bg-black  text-2xl
+    }
+
+    section {
+        @apply relative flex w-full min-h-[calc(100vh-120px)] top-[60px] z-20
+    }
+
+    h1 {
+        @apply text-[6rem] leading-[1em] m-0 font-mono font-bold uppercase
+    } 
+
+    h2 {
+        @apply text-[3rem] m-0 font-syne
+    }
+
+    h3 {
+        @apply text-[1.8rem] m-0 font-syne
+    }
+
+    a {
+        @apply text-white no-underline cursor-pointer
+    }
+}
+
+@layer utilities {
+    .padding {
+        @apply py-[3.125vw] px-[6.25vw]
+      }
+}
+
